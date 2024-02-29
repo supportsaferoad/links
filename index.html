@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "Mahdi">
+<html xmlns="Mahdi">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Support</title>
+<script>
+
+function onLoad(order){
+var text = String(window.location);
+
+if(text.split('?ID=')[1]){
+document.getElementById('txtValue').value = text.split('?ID=')[1];
+document.title = text.split('?ID=')[1];
+}else if(text.split('?id=')[1]){
+document.getElementById('txtValue').value = text.split('?id=')[1];
+document.title = text.split('?id=')[1];
+}else if(text.split('?iD=')[1]){
+document.getElementById('txtValue').value = text.split('?iD=')[1];
+document.title = text.split('?iD=')[1];
+}else if(text.split('?Id=')[1]){
+document.getElementById('txtValue').value = text.split('?Id=')[1];
+document.title = text.split('?Id=')[1];}
+}
+
+function ChangeURL(order){
+document.title = order;
+var text = String(window.location);
+if(order){
+let url = text.split('html')[0] + 'html';
+let newUrl = url + "?ID=" + order
+window.location.href = newUrl;
+window.location.assign(newUrl);
+window.location.replace(newUrl);
+}else{
+document.title = "Support";
+let url = text.split('html')[0] + 'html';
+window.location.href = url;
+window.location.assign(url);
+window.location.replace(url);
+}
+}
+
+function Monitor(order){
+if(order)
+window.open('https://www.saferoad.net/map?ST=-1&Order=asc&AccountID=' + order , '_blank');
+ChangeURL(order);
+}
+
+function NewAccount(order){
+window.open('https://www.saferoad.net/AccountWizard', '_blank');
+ChangeURL(order);
+}
+
+function EditAccount(order){
+if(order)
+window.open('https://www.saferoad.net/AccountWizard/EditAccount?AccountID=' + order , '_blank');
+ChangeURL(order);
+}
+
+function UsersManagement(order){
+if(order)
+window.open('https://www.saferoad.net/UsersManagement?accountID=' + order , '_blank');
+ChangeURL(order);
+}
+
+function CreatAdminUser(order){
+if(order)
+window.open('https://www.saferoad.net/AccountWizard/CreatAdminUser?AccountID=' + order , '_blank');
+ChangeURL(order);
+}
+
+function VehicleManagment(order){
+if(order)
+window.open('https://www.saferoad.net/VehicleManagment?accountID=' + order , '_blank');
+ChangeURL(order);
+}
+
+function AddVehicle(order){
+if(order)
+window.open('https://www.saferoad.net/VehicleManagment/AddVehicleInfo?AccountID=' + order , '_blank');
+ChangeURL(order);
+}
+
+function VehicleExportToExcel(order){
+if(order)
+window.open('https://www.saferoad.net/VehicleManagment/ExportToExcel?search=&AccountID=' + order , '_blank');
+ChangeURL(order);
+}
+
+function DevicesManagement(order){
+if(order)
+window.open('https://www.saferoad.net/DevicesManagement?accountID=' + order , '_blank');
+ChangeURL(order);
+}
+
+function AddDevice(order){
+if(order)
+window.open('https://www.saferoad.net/DevicesManagement/AddDeviceInfo?AccountID=' + order , '_blank');
+ChangeURL(order);
+}
+
+function DriversManagement(order){
+if(order)
+window.open('https://www.saferoad.net/DriversManagement?accountID=' + order , '_blank');
+ChangeURL(order);
+}
+
+function AddDriver(order){
+if(order)
+window.open('https://www.saferoad.net/DriversManagement/AddDriver?accountid=' + order , '_blank');
+ChangeURL(order);
+}
+
+function ManageVehicles(order){
+if(order)
+window.open('https://www.saferoad.net/GroupManagement/ManageVehicles?AccountID=' + order , '_blank');
+ChangeURL(order);
+}
+
+function TransferDevice(order){
+window.open('https://www.saferoad.net/DevicesManagement/TransferDevicesToAccount', '_blank');
+ChangeURL(order);
+}
+
+function TransferVehicle(order){
+window.open('https://www.saferoad.net/VehicleManagment/TransferDevicesToAccount', '_blank');
+ChangeURL(order);
+}
+
+function Reports(order){
+if(order)
+window.open('https://www.saferoad.net/NewReports/index?AccountID=' + order , '_blank');
+ChangeURL(order);
+}
+
+
+function VehicleInquiry(order){
+window.open('https://www.saferoad.net/wasl/vehicleinquiry', '_blank');
+ChangeURL(order);
+}
+
+function VehicleInquiryBySeq(order){
+window.open('https://www.saferoad.net/WASL/VehicleInquiryBySeq', '_blank');
+ChangeURL(order);
+}
+
+function CompanyInquiry(order){
+window.open('https://www.saferoad.net/WASL/CompanyInquiry', '_blank');
+ChangeURL(order);
+}
+
+function imeiEnquiry(order){
+window.open('https://www.saferoad.net/Management/imeiEnquiry', '_blank');
+ChangeURL(order);
+}
+
+function Support(order){
+window.open('https://www.saferoad.net/management/SupportManagment', '_blank');
+ChangeURL(order);
+}
+
+function Inventory(order){
+window.open('https://www.saferoad.net/DevicesManagement?accountID=41', '_blank');
+ChangeURL(order);
+}
+
+function SaferoadAll(order){
+window.open('https://www.saferoad.net/DevicesManagement?accountID=1', '_blank');
+ChangeURL(order);
+}
+
+window.onload = onLoad;
+</script>
+</head>
+<input type="text" maxlength="5" name="value" id="txtValue" />
+<input type="button" value="Update" onclick="ChangeURL(document.getElementById('txtValue').value)" />
+</p>
+</p>
+<input type="button" value="Monitor" onclick="Monitor(document.getElementById('txtValue').value)" />
+</p>
+</p>
+<input type="button" value="Creat New Account" onclick="NewAccount(document.getElementById('txtValue').value)" />
+</p>
+</p>
+<input type="button" value="Edit Account" onclick="EditAccount(document.getElementById('txtValue').value)" />
+</p>
+</p>
+<input type="button" value="Users Management" onclick="UsersManagement(document.getElementById('txtValue').value)" />
+<input type="button" value="Creat Admin User" onclick="CreatAdminUser(document.getElementById('txtValue').value)" />
+</p>
+</p>
+<input type="button" value="Vehicle Managment" onclick="VehicleManagment(document.getElementById('txtValue').value)" />
+<input type="button" value="Add Vehicle" onclick="AddVehicle(document.getElementById('txtValue').value)" />
+<input type="button" value="Vehicle List To Excel" onclick="VehicleExportToExcel(document.getElementById('txtValue').value)" />
+</p>
+</p>
+<input type="button" value="Devices Management" onclick="DevicesManagement(document.getElementById('txtValue').value)" />
+<input type="button" value="Add Device" onclick="AddDevice(document.getElementById('txtValue').value)" />
+</p>
+</p>
+<input type="button" value="Drivers Management" onclick="DriversManagement(document.getElementById('txtValue').value)" />
+<input type="button" value="Add Driver" onclick="AddDriver(document.getElementById('txtValue').value)" />
+</p>
+</p>
+<input type="button" value="Transfer Device" onclick="TransferDevice(document.getElementById('txtValue').value)" />
+<input type="button" value="Transfer Vehicle" onclick="TransferVehicle(document.getElementById('txtValue').value)" />
+</p>
+</p>
+<input type="button" value="Manage Groups Vehicles" onclick="ManageVehicles(document.getElementById('txtValue').value)" />
+</p>
+</p>
+<input type="button" value="Reports" onclick="Reports(document.getElementById('txtValue').value)" />
+</p>
+</p>
+<input type="button" value="Vehicle Inquiry" onclick="VehicleInquiry(document.getElementById('txtValue').value)" />
+<input type="button" value="Vehicle Inquiry By Seq" onclick="VehicleInquiryBySeq(document.getElementById('txtValue').value)" />
+<input type="button" value="Company Inquiry" onclick="CompanyInquiry(document.getElementById('txtValue').value)" />
+</p>
+</p>
+<input type="button" value="Imei Enquiry" onclick="imeiEnquiry(document.getElementById('txtValue').value)" />
+</p>
+</p>
+<input type="button" value="Support" onclick="Support(document.getElementById('txtValue').value)" />
+</p>
+</p>
+<input type="button" value="Inventory" onclick="Inventory(document.getElementById('txtValue').value)" />
+<input type="button" value="SaferoadAll" onclick="SaferoadAll(document.getElementById('txtValue').value)" />
+</p>
+<p id="error"></p>
+<p id="detspace"></p>
+</body>
+</html>
